@@ -1,0 +1,602 @@
+*{
+margin : 0;
+padding: 0;
+font-family: sans-serif;
+}
+.body
+{
+  background-color: #212121;
+}
+html{
+  scroll-behavior: smooth;
+}
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar 
+{
+width: 100%;
+
+padding: 35px 0;
+display: flex;
+align-items: top;
+justify-content: space-between;
+position: fixed;
+z-index: 99;
+
+}
+.navbar .menu /*responsive*/
+{
+position: absolute;
+display: none;
+width: 35px;
+top : 35px;
+right: 50px;
+position: fixed;
+
+}
+.logo{
+  margin-top:-35px ;
+  padding-left: 50px;
+  width: 170px;
+  cursor: pointer;
+}
+
+.navbar ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+    backdrop-filter: blur(9px);
+    border-radius: 20px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*barres bleu en dessous des bouton de la navbar*/
+.navbar ul li ::after
+{
+   content: '';
+   height: 4px;
+   width: 0%;
+   background: #24288b;
+   position: absolute; 
+   left: 0%;
+   bottom: -10px; /*espace entre texte et barres*/
+   transition: 0.5s; /*annimation des barres*/
+}
+
+.navbar ul li :hover:after
+{
+width: 100%;
+}
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1
+{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p
+{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.content a
+{
+  color: white;
+  text-decoration: none;
+}
+.dec{
+width: 200px;
+padding: 15px 0;
+text-align: center;
+margin: 20px 10px ; 
+border-radius: 25px;
+font-weight: 800;
+font-size: large;
+border: 2px solid #24288b;
+background: transparent;
+color: #fff;
+cursor: pointer;
+position : relative ;
+overflow: hidden;
+}
+span
+{
+    background: #24288b;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;   
+    transition: 0.5s;    
+}
+button:hover span
+{
+ width: 100%;
+}
+
+.but
+  {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+/*card*/
+
+.image-card
+{
+  width: 300px;
+  cursor: pointer;
+  margin: 0px;
+  border-radius: 30px;
+} 
+  .ag-format-container 
+  {
+    width: 1142px;
+    margin: 0 auto;
+    padding-top: 10%;
+    
+  }
+  
+  .ag-courses_box 
+  {
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  .black-card 
+  {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  .ajust{
+  
+  width: 300px;
+  cursor: pointer;
+  margin-top: 24px;
+  border-radius: 30px;
+  }
+  .black-card_link 
+  {
+    text-decoration: none;
+    display: block;
+    padding: 30px 20px;
+    background-color: #292928;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  .black-card_link:hover,
+  .black-card_link:hover .ag-courses-item_date 
+  {
+    color: #FFF;
+  }
+  .black-card_link:hover .black-card_bg 
+  {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+  .ag-courses-item_title 
+  {
+    min-height: 100px;      /*espace entre la div titre et l'image/texte*/
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF; 
+    z-index: 2;
+    position: relative;
+  }
+
+  .ag-courses-item_date-box 
+  {
+    font-size: 18px;
+    color: #FFF;
+    z-index: 2;
+    position: relative;
+  }
+
+  .ag-courses-item_date 
+  {
+    font-weight: bold;
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease ;
+  }
+
+  .black-card_bg 
+  {
+    height: 128px;
+    width: 128px;
+    background-color: #24288b;
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .black-card:nth-child(2n) .black-card_bg 
+  {
+    background-color: #ce7d36;
+  }
+
+  .black-card:nth-child(3n) .black-card_bg 
+  {
+    background-color: #cfbb00;
+  }
+
+ /*img forme*/ 
+  img.rounded-corners {
+    border-radius: 30px;
+  }
+  .img-circle {
+    border-radius: 200%;
+   box-shadow: 0px 0px 10px 7px #313131 ;  /*K*/
+  }
+
+
+
+
+
+
+  /*responsive des cartes*/
+  @media only screen and (max-width: 979px) {
+    .black-card {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .black-card {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+    .black-card_link{
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
+
+/*responsive de la nav*/
+  @media screen and (max-width: 1300px)
+  {
+    .navbar .menu{
+      display: block;
+      z-index: 30;
+    }
+    .navbar{
+      padding :0px;
+      margin: 0%;    
+    }
+    .links.mobile-menu{
+    
+    display: flex;
+    
+  }
+
+  .links {
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    background-color: rgb(255, 255, 255,0.20);
+    backdrop-filter: blur(7px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 29;
+    
+  
+  }
+  
+  .links ul
+  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .links ul li
+  {
+    margin: 30px 0px;
+    font-size: 1.4EM;
+  }
+}
+/*bouton suivant*/
+.next{
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.suivant{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px ; 
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: large;
+  border: 2px solid #24288b;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position : relative;
+  overflow: hidden;
+  }
+
+
+/*section Equipe*/
+.Equipe{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.presentation
+{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.presentation a
+{
+  color: white;
+  text-decoration: none;
+}
+
+.Equipe .presentation h1
+{
+    padding-top: 5%;
+    font-size: 70px;
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
+.Equipe .presentation p
+{
+    margin: 20px auto;
+    font-weight: 700;
+    line-height: 25px;
+    font-size: 25px;
+}
+.Equipe .next{ 
+  margin-top: 2%;
+}
+.quiz .next{
+  margin-top:1%;
+}
+/*section partenaires*/
+.agences {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.maps{
+  margin-left: 25%;
+  width: 900px;
+  height: 500px;
+}
+
+.agences .gmap h1
+{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    padding-top: 5%;
+    padding-bottom: 20px;
+}
+
+
+.agences .next
+{
+  margin-top: 3%;
+}
+
+/*section but*/
+
+.but .next{
+  margin-top: 1%; /*calibrage de la position du bouton suivant*/
+} 
+
+
+.googlequiz{
+  width:640px;
+  height:750px;
+}
+
+
+
+/* section soutenir*/
+.marche {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.presentation
+{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+
+.marche .presentation h1
+{
+    padding-top: 10%;
+    font-size: 70px;
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
+.marche .presentation h2
+{
+    padding-top: 10px;
+    font-size: 40px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+.marche .presentation p
+{
+    margin: 20px auto;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 25px;
+}
+.marche .next{ 
+  margin-top: 3%;
+}
+
+.white-board{
+  height: 10vh;
+  background-color: #fff;
+  background: fixed;
+}
+.white-board2{
+  height: 20vh;
+  background-color: #fff;
+  background: fixed;
+}
+/*section QUIZZ*/
+
+
+.quiz .suivant{ 
+  text-shadow: 1px 1px 2px black;
+  margin-top: 50px;
+}
+
+/*footer*/
+.footer-basic {
+  padding:40px 0;
+  background-color:#2e2e2e;
+  color:#ffffff;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+  
+}
+
+.footer-basic li {
+  padding:0 10px;
+  display: inline;
+}
+
+.footer-basic ul a {
+  color:#24288b;
+  text-decoration:bold;
+  opacity:0.8;
+  
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ffffff;
+  margin:0 8px;
+  color:white;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#ffffff;
+  margin-bottom:0;
+}
